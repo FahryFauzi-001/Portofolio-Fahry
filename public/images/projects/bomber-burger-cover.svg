@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#F6F4EF"/>
+  <!-- Soft warm studio accent -->
+  <circle cx="1140" cy="450" r="370" fill="#ECE8DF"/>
+
+  <!-- Mobile-first Live App Preview Frame (480px proportions, matching Forest Green + Cream + Ember live app) -->
+  <rect x="890" y="64" width="430" height="772" rx="48" fill="#141414"/>
+  <rect x="908" y="82" width="394" height="736" rx="36" fill="#FBF8F1"/>
+
+  <!-- Top bar inside phone: BOMBER BURGER + HALAL badge -->
+  <text x="936" y="130" fill="#1F4D2E" font-family="system-ui, sans-serif" font-size="20" font-weight="900" letter-spacing="0.04em">BOMBER BURGER</text>
+  <rect x="1202" y="108" width="72" height="28" rx="14" fill="#E8F1EB" stroke="#1F4D2E" stroke-width="1.5"/>
+  <text x="1238" y="127" text-anchor="middle" fill="#1F4D2E" font-family="ui-monospace, monospace" font-size="13" font-weight="700">HALAL</text>
+
+  <!-- Main Forest Green Hero Card (exact live Home.tsx structure) -->
+  <rect x="932" y="156" width="346" height="442" rx="26" fill="#1F4D2E"/>
+  <text x="958" y="206" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Bingung mau pesan apa?</text>
+  <text x="958" y="238" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Pilih dulu sebelum kasir.</text>
+  <text x="958" y="274" fill="#CBE0D2" font-family="system-ui, sans-serif" font-size="14">Jawab beberapa pertanyaan singkat, AI kami</text>
+  <text x="958" y="294" fill="#CBE0D2" font-family="system-ui, sans-serif" font-size="14">pilihkan 3 menu yang paling pas buat kamu.</text>
+
+  <!-- Best seller preview strip inside hero card -->
+  <rect x="958" y="318" width="294" height="122" rx="18" fill="#163821"/>
+  <rect x="974" y="334" width="110" height="26" rx="13" fill="#E05A2B"/>
+  <text x="1029" y="352" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="12" font-weight="700">BEST SELLER</text>
+  <text x="974" y="394" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="800">OG Burger · CEO Phillystack</text>
+  <text x="974" y="420" fill="#A9C7B3" font-family="ui-monospace, monospace" font-size="13">Taste · Protein · Budget · Avoid · Group Plan</text>
+
+  <!-- Primary Ember CTA button: Bantu Aku Pilih (AI) -->
+  <rect x="958" y="460" width="294" height="54" rx="16" fill="#E05A2B"/>
+  <text x="1105" y="493" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="17" font-weight="800">✦ Bantu Aku Pilih (AI)</text>
+
+  <!-- Secondary outline button: Lihat Semua Menu -->
+  <rect x="958" y="526" width="294" height="50" rx="16" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="1.5"/>
+  <text x="1105" y="557" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Lihat Semua Menu</text>
+
+  <!-- Bottom 3-step guide inside phone -->
+  <rect x="932" y="616" width="346" height="176" rx="22" fill="#EFECE5"/>
+  <text x="956" y="652" fill="#1F4D2E" font-family="ui-monospace, monospace" font-size="13" font-weight="700">3-STEP CASHIER FLOW</text>
+  <text x="956" y="688" fill="#141414" font-family="system-ui, sans-serif" font-size="15" font-weight="700">01. Pilih menu (AI atau eksplor sendiri)</text>
+  <text x="956" y="722" fill="#141414" font-family="system-ui, sans-serif" font-size="15" font-weight="700">02. Simpan ke daftar Pilihanku</text>
+  <text x="956" y="756" fill="#141414" font-family="system-ui, sans-serif" font-size="15" font-weight="700">03. Tunjukkan layar ke kasir</text>
+
+  <!-- Left Editorial Typography -->
+  <text x="112" y="218" fill="#1F4D2E" font-family="ui-monospace, monospace" font-size="22" font-weight="700">LIVE WEB APP · REACT · CLAUDE API</text>
+  <text x="112" y="316" fill="#0E0E0E" font-family="system-ui, sans-serif" font-size="78" font-weight="800">Bomber Burger</text>
+  <text x="112" y="402" fill="#0E0E0E" font-family="system-ui, sans-serif" font-size="78" font-weight="800">Smart Menu</text>
+  <text x="112" y="476" fill="#5E5B55" font-family="system-ui, sans-serif" font-size="28">QR AI Recommender · 6 Preference Filters · Group Plans</text>
+
+  <!-- Verified Field Validation Pills -->
+  <rect x="112" y="534" width="196" height="92" rx="20" fill="#FAF9F5" stroke="#DFD9CC" stroke-width="2"/>
+  <text x="138" y="582" fill="#0E0E0E" font-family="ui-monospace, monospace" font-size="34" font-weight="800">8.0/10</text>
+  <text x="138" y="610" fill="#6B6861" font-family="system-ui, sans-serif" font-size="16">AI Match Score</text>
+
+  <rect x="328" y="534" width="176" height="92" rx="20" fill="#FAF9F5" stroke="#DFD9CC" stroke-width="2"/>
+  <text x="354" y="582" fill="#0E0E0E" font-family="ui-monospace, monospace" font-size="34" font-weight="800">70%</text>
+  <text x="354" y="610" fill="#6B6861" font-family="system-ui, sans-serif" font-size="16">QR Scan Rate</text>
+
+  <rect x="524" y="534" width="196" height="92" rx="20" fill="#FAF9F5" stroke="#DFD9CC" stroke-width="2"/>
+  <text x="550" y="582" fill="#0E0E0E" font-family="ui-monospace, monospace" font-size="34" font-weight="800">50%</text>
+  <text x="550" y="610" fill="#6B6861" font-family="system-ui, sans-serif" font-size="16">Completed Flow</text>
+
+  <text x="112" y="700" fill="#7A766E" font-family="ui-monospace, monospace" font-size="20">bomber-burger-smart-menu-yunb.vercel.app</text>
+</svg>

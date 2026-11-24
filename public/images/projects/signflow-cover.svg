@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#141414"/>
+  <!-- Subtle camera reticle frame -->
+  <rect x="780" y="120" width="700" height="660" rx="34" fill="#1C1C1C" stroke="#2F2F2F" stroke-width="2"/>
+  <!-- Hand landmark skeleton illustration -->
+  <g stroke="#F6F4EF" stroke-width="4" stroke-linecap="round">
+    <line x1="1130" y1="620" x2="1050" y2="510"/>
+    <line x1="1050" y1="510" x2="995" y2="410"/>
+    <line x1="1130" y1="620" x2="1095" y2="465"/>
+    <line x1="1095" y1="465" x2="1080" y2="310"/>
+    <line x1="1130" y1="620" x2="1145" y2="455"/>
+    <line x1="1145" y1="455" x2="1152" y2="285"/>
+    <line x1="1130" y1="620" x2="1195" y2="475"/>
+    <line x1="1195" y1="475" x2="1220" y2="335"/>
+    <line x1="1130" y1="620" x2="1235" y2="520"/>
+    <line x1="1235" y1="520" x2="1280" y2="425"/>
+  </g>
+  <g fill="#F6F4EF" stroke="#141414" stroke-width="3">
+    <circle cx="1130" cy="620" r="10"/>
+    <circle cx="1050" cy="510" r="9"/>
+    <circle cx="995" cy="410" r="9"/>
+    <circle cx="1095" cy="465" r="9"/>
+    <circle cx="1080" cy="310" r="9"/>
+    <circle cx="1145" cy="455" r="9"/>
+    <circle cx="1152" cy="285" r="9"/>
+    <circle cx="1195" cy="475" r="9"/>
+    <circle cx="1220" cy="335" r="9"/>
+    <circle cx="1235" cy="520" r="9"/>
+    <circle cx="1280" cy="425" r="9"/>
+  </g>
+  <rect x="826" y="164" width="330" height="50" rx="25" fill="#F6F4EF"/>
+  <text x="854" y="197" fill="#141414" font-family="ui-monospace, monospace" font-size="20" font-weight="700">MEDIAPIPE · 98-DIM</text>
+  <rect x="826" y="688" width="608" height="54" rx="16" fill="#242424"/>
+  <text x="856" y="723" fill="#F6F4EF" font-family="ui-monospace, monospace" font-size="22">SIGNBIGRU · TOP-3 ACC 89.1% · 65 ASL WORDS</text>
+  <!-- Left editorial typography -->
+  <text x="120" y="250" fill="#A39E95" font-family="ui-monospace, monospace" font-size="22" font-weight="600">COMPUTER VISION · DEEP LEARNING</text>
+  <text x="120" y="352" fill="#F6F4EF" font-family="system-ui, sans-serif" font-size="84" font-weight="800">SignFlow AI</text>
+  <text x="120" y="426" fill="#C7C3BA" font-family="system-ui, sans-serif" font-size="30">Real-Time ASL Sign Translator</text>
+  <text x="120" y="510" fill="#8C8880" font-family="ui-monospace, monospace" font-size="21">PyTorch · MediaPipe Holistic · OpenCV</text>
+</svg>

@@ -1,0 +1,36 @@
+---
+title: "Kinclong — Laundry App"
+category: "mobile"
+summary: "Offline-first Android pickup-and-delivery laundry app featuring 5-stage order tracking, background WorkManager updates, loyalty points, kiloan subscriptions, and an admin panel."
+role: "Solo Android Developer"
+period: "2026"
+tech: ["Kotlin", "Jetpack Compose", "Room DB", "Hilt", "WorkManager", "DataStore"]
+cover: "/images/projects/kinclong-cover.svg"
+gallery:
+  - "/images/projects/kinclong-cover.svg"
+metrics:
+  - label: "Tracking"
+    value: "5 Stages"
+  - label: "Storage"
+    value: "Offline-First"
+  - label: "Flows"
+    value: "Customer + Admin"
+links:
+  github: "https://github.com/FahryFauzi-001/kinclong-app"
+featured: true
+---
+
+## Problem
+Single-brand laundry pickup-and-delivery operations involve many moving parts—weight pricing, subscription quotas, multi-stage order tracking, receipts, and cashier management—which are often disconnected or rely on fragile network connectivity.
+
+## My Role
+Architected and developed the full end-to-end Android application using modern Jetpack libraries (Compose, Room, Hilt DI, Preferences DataStore, and WorkManager).
+
+## Solution & Architecture
+- **End-to-End Customer Flow**: Local hashed authentication with DataStore session persistence, dynamic service pricing (`PriceCalculator`) across Kiloan, Express, and Dry Clean orders, simulated `QRIS` / Wallet / `COD` payments, digital receipts, and Bandung outlet directory with live open/close status.
+- **5-Stage Live Tracking & Notifications**: Interactive stepper (`Picked Up → Washed → Ironed → Delivered → Completed`) paired with clear `Laundry Beres` / `Belum Beres` badges, periodic **WorkManager** status progression (`TrackingSimulationWorker`), and local notifications.
+- **Subscriptions & Loyalty Engine**: Monthly kiloan quota packages (`15 kg`, `30 kg`, `50 kg`) with live usage bars, plus automatic loyalty points and transaction logs on order completion.
+- **Built-In Admin Mode & 1-Click Demo Seeder**: Hidden 5-tap admin shortcut on the Profile screen for order search, filtering, and status updates, plus an idempotent transactional demo data loader (`database.withTransaction`).
+
+## Result
+Shipped a complete, production-structured offline-first Android app demonstrating transactional local consistency, clean dependency injection, and dual customer/admin workflows.

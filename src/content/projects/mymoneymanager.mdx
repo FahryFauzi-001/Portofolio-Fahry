@@ -1,0 +1,36 @@
+---
+title: "MyMoneyManager"
+category: "mobile"
+summary: "Minimalist, local-first personal finance Android app built with Kotlin, Jetpack Compose (Material 3), and Room DB for fast, distraction-free income and expense tracking."
+role: "Solo Android Developer"
+period: "2026"
+tech: ["Kotlin", "Jetpack Compose", "Material 3", "Room DB", "Coroutines", "MVVM"]
+cover: "/images/projects/mymoneymanager-cover.svg"
+gallery:
+  - "/images/projects/mymoneymanager-cover.svg"
+metrics:
+  - label: "Privacy"
+    value: "100% Local"
+  - label: "Architecture"
+    value: "MVVM + UDF"
+  - label: "Android SDK"
+    value: "API 26–37"
+links:
+  github: "https://github.com/FahryFauzi-001/MyMoneyManager-App"
+featured: true
+---
+
+## Problem
+Most personal finance apps overwhelm users with cluttered dashboards, opaque cloud syncing, and complex multi-account transfer loops that make logging a daily coffee slower than it should be.
+
+## My Role
+Designed and built the entire Android application solo—covering Material 3 UI design, MVVM Clean Architecture, reactive Room SQLite persistence, and schema migrations.
+
+## Solution & Architecture
+- **Deterministic Transaction Engine**: Eliminates confusing internal transfer loops by focusing strictly on two clear states (`INCOME` and `EXPENSE`), keeping personal bookkeeping fast and legible.
+- **Instant Reactive Aggregation**: Powered by **Kotlin Coroutines** and **Room SQL Reactive Flows** so balances, category breakdowns, and monthly budgets recalculate instantaneously with zero UI lag.
+- **Animated Splash & Async Preload**: Preloads the Room database asynchronously behind a lightweight branded splash transition straight into the dashboard.
+- **100% Local-First Privacy**: Financial records stay strictly on-device with automated Room schema migrations (`MIGRATION_1_2`, `MIGRATION_2_3`) and optional biometric / PIN security.
+
+## Result
+Delivered a crisp, zero-bloat native Kotlin & Jetpack Compose experience that keeps daily financial tracking private, fast, and accessible offline.

@@ -1,0 +1,38 @@
+---
+title: "Superstore Profit Predictor"
+category: "ml"
+summary: "End-to-end retail ML Decision Support System predicting order sales and flagging unprofitable baskets before checkout using Random Forest, FastAPI, and Streamlit—deployed live on Streamlit Cloud."
+role: "Team of 2 · LnT Camp 2026 Final Project"
+period: "2026"
+tech: ["Python", "Scikit-learn", "Random Forest", "FastAPI", "Pydantic", "Streamlit", "SQLite"]
+cover: "/images/projects/superstore-cover.svg"
+gallery:
+  - "/images/projects/superstore-cover.svg"
+metrics:
+  - label: "ROC-AUC"
+    value: "0.961"
+  - label: "Accuracy"
+    value: "91.4%"
+  - label: "Sales R²"
+    value: "0.765"
+links:
+  github: "https://github.com/FahryFauzi-001/superstore-profit-predictor"
+  demo: "https://lnt-camp-2026-final-yg6v7mhkvfnhthptgg4rnp.streamlit.app/"
+featured: true
+---
+
+## Problem
+Retail managers often discover margin-eroding discounts and unprofitable orders only after fulfillment—when steep markdowns and shipping costs have already locked in a loss.
+
+## Project Context
+Built as a 2-person final project for **LnT Camp 2026** (*Bridging the Gap: Empowering Future Talent through Machine Learning for Industry Innovation*) and deployed live at **[lnt-camp-2026-final-yg6v7mhkvfnhthptgg4rnp.streamlit.app](https://lnt-camp-2026-final-yg6v7mhkvfnhthptgg4rnp.streamlit.app/)**.
+
+## Solution & Live App Architecture
+- **Normalized SQLite Pipeline & Leakage-Free Features**: Restructured the Global Superstore dataset into a normalized SQLite database (`25,753` aggregated orders across `orders`, `order_items`, and dimension tables) and selected **10 pre-checkout features** (`discount`, `shipping_cost`, `quantity`, `n_items`, `share_furniture`, `share_technology`, and one-hot `ship_mode`)—explicitly excluding post-order leakage variables like `delivery_duration`, `profit`, and `profit_margin`.
+- **Dual Random Forest Models & 3-Tier Business Thresholds**:
+  - **Classification (`POST /predict/classification`)**: Outputs `P(Profit)` mapped to custom 3-tier operational thresholds—**Safe to Process (`P ≥ 70%`)**, **Review Manual (`50% ≤ P < 70%`)**, and **High Risk (`P < 50%`)**—achieving **0.961 ROC-AUC**, **91.4% accuracy**, and **0.85 recall** on loss-making orders (`0.962 ± 0.003` on 5-fold CV).
+  - **Regression (`POST /predict/regression`)**: Estimates order revenue (`Sales`) at **R² 0.765** (MAE `$158`), with ablation testing showing how strongly order revenue depends on `shipping_cost`.
+- **Decoupled Streamlit + FastAPI Serving**: The **Streamlit** frontend never loads `.pkl` models directly; it validates basket inputs (`ship_mode`, `quantity`, `discount`, `shipping_cost`, and Furniture / Office Supplies / Technology line counts) through **FastAPI + Pydantic** (`uvicorn backend.main:app`) over HTTP/JSON, auto-booting the backend subprocess on Streamlit Community Cloud and verifying `/health` before serving predictions.
+
+## Result
+Delivered a live, interactive retail Decision Support System combining strong cross-validated metrics, disciplined target-leakage prevention, Pydantic input validation, and clean frontend/backend separation.

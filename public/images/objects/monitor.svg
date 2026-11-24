@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="monClay" x1="22" y1="30" x2="178" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7F5F0"/>
+      <stop offset="55%" stop-color="#EBE8E0"/>
+      <stop offset="100%" stop-color="#D7D3C9"/>
+    </linearGradient>
+    <linearGradient id="monRecess" x1="34" y1="42" x2="162" y2="124" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E2DFD7"/>
+      <stop offset="100%" stop-color="#EFECE6"/>
+    </linearGradient>
+    <filter id="monDrop" x="10" y="18" width="184" height="172" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="3" dy="14" stdDeviation="11" flood-color="#1A1815" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <g filter="url(#monDrop)">
+    <!-- Clay neck & foot -->
+    <rect x="86" y="130" width="28" height="28" rx="6" fill="#CFCAC0"/>
+    <rect x="62" y="152" width="76" height="14" rx="7" fill="#E6E2DA" stroke="#FFFFFF" stroke-width="1.2"/>
+    <!-- 3D extrusion -->
+    <rect x="26" y="38" width="152" height="100" rx="14" fill="#C9C4B9"/>
+    <!-- Front clay body -->
+    <rect x="21" y="32" width="152" height="100" rx="14" fill="url(#monClay)" stroke="#FFFFFF" stroke-width="1.5"/>
+    <!-- Recessed matte screen -->
+    <rect x="31" y="42" width="132" height="80" rx="8" fill="url(#monRecess)" stroke="#CFCAC0" stroke-width="1.2"/>
+    <!-- Minimal sculptural wireframe lines -->
+    <rect x="42" y="54" width="38" height="56" rx="5" fill="#FAF9F5" fill-opacity="0.7"/>
+    <rect x="88" y="54" width="64" height="24" rx="5" fill="#FAF9F5" fill-opacity="0.7"/>
+    <rect x="88" y="84" width="64" height="26" rx="5" fill="#E5E1D8"/>
+  </g>
+</svg>

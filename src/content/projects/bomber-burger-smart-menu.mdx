@@ -1,0 +1,43 @@
+---
+title: "Bomber Burger Smart Menu"
+category: "web"
+summary: "Mobile-first QR smart menu and AI dish recommender for Bomber Burger—matching customers to 3 personalized dishes or group meal plans via Claude API with strict anti-hallucination guardrails."
+role: "Team of 5 · Venture Creation / BiFest (LA75)"
+period: "2026"
+tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Claude API", "Vercel Serverless"]
+cover: "/images/projects/bomber-burger-cover.svg"
+gallery:
+  - "/images/projects/bomber-burger-cover.svg"
+  - "/images/projects/bomber-burger/og-burger.webp"
+  - "/images/projects/bomber-burger/ceo-phillystack.webp"
+  - "/images/projects/bomber-burger/double-beef.webp"
+metrics:
+  - label: "AI Match Score"
+    value: "8.0 / 10"
+  - label: "QR Scan Rate"
+    value: "70%"
+  - label: "Flow Completion"
+    value: "50%"
+links:
+  github: "https://github.com/FahryFauzi-001/Bomber-Burger-Burger-Smart-Menu-recomendation"
+  demo: "https://bomber-burger-smart-menu-yunb.vercel.app/"
+featured: true
+---
+
+## Problem
+First-time diners at Bomber Burger often feel unsure what to order before reaching the cashier—especially when juggling taste preferences, spice levels, budget, ingredient avoidance (like onion or cheese), or ordering for a group—while traditional ordering apps add unnecessary login and checkout friction.
+
+## Project Context
+Built as a 5-person **Venture Creation / BiFest (Class LA75)** project at BINUS University and deployed live at **[bomber-burger-smart-menu-yunb.vercel.app](https://bomber-burger-smart-menu-yunb.vercel.app/)**.
+
+## Solution & Live App Flow
+- **Mobile-First QR Experience (`max-w-[480px]`)**: Customers scan a QR code and land straight on Bomber Burger's Forest Green & Cream interface with a best-seller carousel and Halal badge—no login, cart, or online checkout required.
+- **6-Dimension Preference Picker (`/preferensi`)**: Captures **Taste** (*Pedas / Tidak terlalu pedas / Manis / Gurih*), **Protein** (*Beef / Chicken*), **Budget** (`< Rp30k` / `Rp30–50k` / `> Rp50k`), **Portion Size**, **Ingredients to Avoid** (*Bawang*, *Keju*), and **Party Size** (`1–10` diners, automatically generating a structured **Group Plan** for 3+ people), plus optional free-text notes.
+- **Guarded Claude API Recommender (`api/recommend.ts`)**: Runs as a rate-limited Vercel Serverless Function (`10 req/min`, `12s` timeout) using the **Anthropic Claude SDK** against the official structured menu JSON. A dedicated post-processing guardrail (`enforceClaims`) verifies that every recommended ID exists in the menu, enforces avoided-ingredient exclusions, blocks hallucinated prices/claims, and falls back smoothly to a local deterministic recommender (`utils/recommend.ts`) if the API is unreachable.
+- **Explore & `Pilihanku` Cashier Checklist (`/menu`, `/menu/:id`, `/pilihanku`)**: Diners can also browse the full menu with Best Seller / Favourite badges and extra-beef customization, save picks via the floating action button, and show their final **`Pilihanku`** checklist directly to the cashier.
+
+## Field Validation Results
+Tested directly on-site with real Bomber Burger customers:
+- **70%** of approached diners scanned the QR code.
+- **50%** completed the entire recommendation flow.
+- **8.0 / 10** average customer satisfaction score for AI recommendation fit.

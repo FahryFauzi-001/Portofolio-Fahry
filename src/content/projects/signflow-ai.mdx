@@ -1,0 +1,35 @@
+---
+title: "SignFlow AI"
+category: "computer-vision"
+summary: "Real-time American Sign Language (ASL) recognition system powered by MediaPipe Holistic landmark extraction and a 2-layer Bidirectional GRU deep learning model."
+role: "Computer Vision & Deep Learning Developer"
+period: "2026"
+tech: ["Python", "PyTorch", "MediaPipe", "OpenCV", "BiGRU", "Computer Vision"]
+cover: "/images/projects/signflow-cover.svg"
+gallery:
+  - "/images/projects/signflow-cover.svg"
+metrics:
+  - label: "Top-3 Accuracy"
+    value: "89.1%"
+  - label: "Top-1 Accuracy"
+    value: "75.7%"
+  - label: "ASL Vocabulary"
+    value: "65 Words"
+links:
+  github: "https://github.com/FahryFauzi-001/SignFlow-AI"
+featured: true
+---
+
+## Problem
+Communication barriers between sign language users and non-signers persist in daily interactions because real-time ASL translation requires understanding both spatial hand shapes and temporal motion across video frames.
+
+## My Role
+Built the feature extraction pipeline, sequence model architecture (`SignBiGRU`), training/evaluation workflow on unseen signers, and the real-time webcam inference app (`app_webcam.py`).
+
+## Solution & Architecture
+- **Spatial Landmark Normalization**: Uses **MediaPipe Holistic** to track 48 spatial keypoints (upper-body pose + left & right hands) plus 2 hand-presence masks—producing a **98-dimensional feature vector per frame** normalized against shoulder center and shoulder width for camera-distance invariance.
+- **Temporal Sequence Modeling**: Feeds a **32-frame sliding window** into a 2-layer Bidirectional GRU (`SignBiGRU`, 256 hidden units per direction) with *Temporal Average Pooling* to classify **65 ASL words + 1 `idle` class**.
+- **Interactive Real-Time Webcam App**: Live OpenCV inference supporting aspect-ratio toggles (`3:4` / `9:16` / `Raw`), one-key buffer reset, and instant predicted text overlay.
+
+## Result
+Evaluated strictly on **unseen signers** in the test split, achieving **75.7% Top-1 accuracy** and **89.1% Top-3 accuracy** across 65 dynamic ASL signs at smooth real-time webcam frame rates.

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="clayFace" x1="48" y1="22" x2="148" y2="178" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7F5F0"/>
+      <stop offset="55%" stop-color="#ECE9E2"/>
+      <stop offset="100%" stop-color="#DCD8CE"/>
+    </linearGradient>
+    <linearGradient id="claySide" x1="56" y1="26" x2="156" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D5D0C6"/>
+      <stop offset="100%" stop-color="#B9B4AA"/>
+    </linearGradient>
+    <linearGradient id="screenRecess" x1="60" y1="36" x2="138" y2="164" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E5E2DA"/>
+      <stop offset="100%" stop-color="#F2F0EA"/>
+    </linearGradient>
+    <filter id="clayDrop" x="20" y="12" width="166" height="184" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="4" dy="14" stdDeviation="11" flood-color="#1A1815" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <g filter="url(#clayDrop)">
+    <rect x="54" y="24" width="96" height="156" rx="22" fill="url(#claySide)"/>
+    <rect x="48" y="18" width="96" height="156" rx="22" fill="url(#clayFace)" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="56" y="28" width="80" height="136" rx="15" fill="url(#screenRecess)" stroke="#D4CFC5" stroke-width="1"/>
+    <rect x="82" y="34" width="28" height="5" rx="2.5" fill="#C7C2B8"/>
+    <rect x="80" y="155" width="32" height="3.5" rx="1.75" fill="#C7C2B8"/>
+    <path d="M58 34C64 26 78 22 104 22" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.75"/>
+  </g>
+</svg>

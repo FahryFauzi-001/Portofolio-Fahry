@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #f6f4ef;
+    color: #0e0e0e;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #f6f4ef;
+    color: #0e0e0e;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #141414;
+    color: #f6f4ef;
+  }
+}
+
+.glass-panel {
+  background: rgba(252, 251, 248, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Crisp organic contour outline around hovered clay objects (matching reference) */
+.clay-object-img {
+  filter: drop-shadow(0 12px 18px rgba(18, 17, 15, 0.13));
+  transition: filter 220ms ease, transform 220ms ease;
+}
+
+.clay-object-img-active {
+  filter: drop-shadow(0 0 1.4px #4f5bd5) drop-shadow(0 0 1.4px #4f5bd5)
+    drop-shadow(0 16px 26px rgba(18, 17, 15, 0.17));
+}

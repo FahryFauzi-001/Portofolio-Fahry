@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="pcbClay" x1="40" y1="24" x2="160" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7F5F0"/>
+      <stop offset="60%" stop-color="#EAE6DE"/>
+      <stop offset="100%" stop-color="#D5D0C6"/>
+    </linearGradient>
+    <linearGradient id="shieldClay" x1="68" y1="50" x2="132" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#DDD9CF"/>
+    </linearGradient>
+    <filter id="espDrop" x="20" y="14" width="166" height="178" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="3" dy="14" stdDeviation="11" flood-color="#1A1815" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <g filter="url(#espDrop)">
+    <!-- PCB thickness -->
+    <rect x="48" y="28" width="108" height="146" rx="14" fill="#C7C2B8"/>
+    <!-- Matte ivory PCB -->
+    <rect x="43" y="22" width="108" height="146" rx="14" fill="url(#pcbClay)" stroke="#FFFFFF" stroke-width="1.5"/>
+    <!-- Pin rows -->
+    <g fill="#B4AFA4">
+      <circle cx="54" cy="42" r="3.5"/>
+      <circle cx="54" cy="56" r="3.5"/>
+      <circle cx="54" cy="70" r="3.5"/>
+      <circle cx="54" cy="84" r="3.5"/>
+      <circle cx="54" cy="98" r="3.5"/>
+      <circle cx="54" cy="112" r="3.5"/>
+      <circle cx="54" cy="126" r="3.5"/>
+      <circle cx="54" cy="140" r="3.5"/>
+      <circle cx="140" cy="42" r="3.5"/>
+      <circle cx="140" cy="56" r="3.5"/>
+      <circle cx="140" cy="70" r="3.5"/>
+      <circle cx="140" cy="84" r="3.5"/>
+      <circle cx="140" cy="98" r="3.5"/>
+      <circle cx="140" cy="112" r="3.5"/>
+      <circle cx="140" cy="126" r="3.5"/>
+      <circle cx="140" cy="140" r="3.5"/>
+    </g>
+    <!-- PCB Antenna trace -->
+    <path d="M74 36H120M74 36V44H86V36M98 36V44H110V36" stroke="#BEB9AE" stroke-width="2" stroke-linecap="round"/>
+    <!-- Raised clay RF shield -->
+    <rect x="66" y="54" width="62" height="58" rx="8" fill="url(#shieldClay)" stroke="#C8C3B8" stroke-width="1.5"/>
+    <rect x="78" y="74" width="38" height="5" rx="2.5" fill="#C5C0B5"/>
+    <rect x="84" y="85" width="26" height="4" rx="2" fill="#D2CEC4"/>
+    <!-- Tactile micro switches -->
+    <rect x="69" y="124" width="16" height="14" rx="4" fill="#DDD8CE" stroke="#C4BFB4" stroke-width="1"/>
+    <circle cx="77" cy="131" r="3" fill="#4A4843"/>
+    <rect x="109" y="124" width="16" height="14" rx="4" fill="#DDD8CE" stroke="#C4BFB4" stroke-width="1"/>
+    <circle cx="117" cy="131" r="3" fill="#4A4843"/>
+    <!-- USB port -->
+    <rect x="82" y="152" width="30" height="17" rx="5" fill="#D8D3C9" stroke="#FFFFFF" stroke-width="1.2"/>
+    <rect x="89" y="158" width="16" height="5" rx="2.5" fill="#52504B"/>
+  </g>
+</svg>

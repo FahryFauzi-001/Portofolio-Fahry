@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <radialGradient id="camBody" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="58%" stop-color="#EAE7DF"/>
+      <stop offset="100%" stop-color="#D0CBC0"/>
+    </radialGradient>
+    <linearGradient id="camFoot" x1="56" y1="140" x2="144" y2="174" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EAE7DF"/>
+      <stop offset="100%" stop-color="#C9C4B9"/>
+    </linearGradient>
+    <radialGradient id="blackLens" cx="36%" cy="34%" r="64%">
+      <stop offset="0%" stop-color="#3F3F46"/>
+      <stop offset="55%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+    <filter id="camDrop" x="18" y="14" width="166" height="178" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="14" stdDeviation="11" flood-color="#1A1815" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#camDrop)">
+    <!-- Sculpted clay foot -->
+    <path d="M58 158C58 144 74 138 100 138C126 138 142 144 142 158C142 167 132 172 100 172C68 172 58 167 58 158Z" fill="url(#camFoot)" stroke="#FFFFFF" stroke-width="1.2"/>
+    <rect x="84" y="124" width="32" height="22" rx="10" fill="#D7D2C8"/>
+    <!-- Spherical matte clay head -->
+    <circle cx="100" cy="84" r="56" fill="url(#camBody)" stroke="#FFFFFF" stroke-width="1.5"/>
+    <!-- Top sensor indicator -->
+    <ellipse cx="100" cy="40" rx="10" ry="3.5" fill="#18181B"/>
+    <!-- Recessed dark lens ring -->
+    <circle cx="100" cy="86" r="28" fill="#D5D0C6"/>
+    <circle cx="100" cy="86" r="23" fill="url(#blackLens)"/>
+    <circle cx="100" cy="86" r="10" fill="#050505" stroke="#27272A" stroke-width="1.5"/>
+    <!-- Crisp specular reflection -->
+    <circle cx="92" cy="78" r="4" fill="#FFFFFF" fill-opacity="0.72"/>
+    <circle cx="107" cy="93" r="1.8" fill="#FFFFFF" fill-opacity="0.32"/>
+  </g>
+</svg>

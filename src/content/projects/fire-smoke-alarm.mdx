@@ -1,0 +1,36 @@
+---
+title: "Fire & Smoke Alarm System"
+category: "iot"
+summary: "Real-time embedded IoT fire and smoke detection system built on Arduino UNO R4 WiFi with MQ-2 gas & flame sensors, local buzzer/LED alerts, and instant Telegram chat notifications via Telegram Bot API."
+role: "Embedded & IoT Developer"
+period: "2026"
+tech: ["Arduino UNO R4 WiFi", "C++", "MQ-2 Sensor", "Flame Sensor", "Telegram Bot API", "WiFi HTTP"]
+cover: "/images/projects/fire-smoke-alarm/system-architecture.jpg"
+gallery:
+  - "/images/projects/fire-smoke-alarm/system-architecture.jpg"
+  - "/images/projects/fire-smoke-alarm/wiring-diagram.jpg"
+metrics:
+  - label: "Sensors"
+    value: "MQ-2 + Flame"
+  - label: "Connectivity"
+    value: "Built-in WiFi"
+  - label: "Alerts"
+    value: "Buzzer + Telegram"
+links:
+  github: "https://github.com/FahryFauzi-001/Fire-and-Smoke-Alarm-System-using-Arduino-with-Telegram-Chat-Notification."
+featured: true
+---
+
+## Problem
+Low-cost household and lab fire alarms usually sound only locally—leaving owners completely unaware of gas leaks, smoke buildup, or open flames when nobody is physically inside the room.
+
+## My Role
+Wired the embedded sensor circuit, wrote the Arduino C++ monitoring & WiFi alert firmware, and documented the wiring schematic and end-to-end architecture.
+
+## Solution & Architecture
+- **Dual-Sensor Hardware Monitoring**: Combines an analog **MQ-2 gas/smoke sensor** (LPG, methane, smoke) with a digital infrared **flame sensor** on an **Arduino UNO R4 WiFi** (5V operation, no separate GSM module required).
+- **Immediate Local Feedback**: Drives a green status LED under normal conditions and switches immediately to a red LED + active buzzer when gas exceeds the threshold or flame is detected.
+- **Telegram Chat Alert Dispatch**: Sends HTTP alert payloads directly over built-in WiFi to the **Telegram Bot API**, delivering instant fire/smoke warning messages straight to the user's Telegram chat.
+
+## Result
+Built and documented a practical, low-cost IoT safety prototype with complete wiring diagrams, reproducible firmware flow, and real-time local + Telegram notification alerts.
