@@ -108,8 +108,8 @@ export function AboutPanel({
               Curriculum Vitae (PDF)
             </h3>
             <p className="mt-1.5 max-w-sm text-sm text-[#5E5B55]">
-              Download the latest English resume covering technical projects,
-              volunteer experience, and certifications.
+              Download or view the latest resume covering technical projects,
+              campus experience, and technical skills.
             </p>
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <a
@@ -120,16 +120,15 @@ export function AboutPanel({
                 <Download className="h-4 w-4" />
                 <span>Download CV PDF</span>
               </a>
-              <Link
-                href="/about"
+              <a
+                href={profile.cvPath}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-10 items-center gap-1.5 rounded-full border border-[#D4CEC2] bg-white px-4 text-xs font-medium text-[#141414] hover:border-[#141414]"
               >
-                <span>View Full Profile</span>
-              </Link>
+                <span>Open PDF</span>
+              </a>
             </div>
-            <p className="mt-4 font-mono text-[11px] text-[#8C8880]">
-              File slot: public/cv/Muhammad-Fahry-Fauzi-CV.pdf
-            </p>
           </div>
         )}
       </div>

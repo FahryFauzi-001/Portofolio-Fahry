@@ -4,7 +4,7 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "https://fahryfauzi.dev");
+    : "https://fahry.vercel.app");
 
 export const CATEGORY_META: Record<
   Category,
