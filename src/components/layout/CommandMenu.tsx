@@ -126,7 +126,7 @@ export function CommandMenu({ open, onClose, projects }: CommandMenuProps) {
 
               <a
                 href={profile.cvPath}
-                download
+                download="Muhammad-Fahry-Fauzi-CV.pdf"
                 onClick={onClose}
                 className="flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-sm text-[#3B3935] hover:bg-[#EFECE5] hover:text-[#0E0E0E]"
               >

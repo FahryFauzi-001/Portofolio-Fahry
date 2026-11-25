@@ -17,7 +17,7 @@ export const profile: Profile = {
   email: "mfahryfauzi@gmail.com",
   avatar: "/images/profile/fahry-cutout.png",
   // Drop your real PDF at public/cv/Muhammad-Fahry-Fauzi-CV.pdf
-  cvPath: "/cv/Muhammad-Fahry-Fauzi-CV.pdf",
+  cvPath: "/cv/Muhammad-Fahry-Fauzi-CV.pdf?v=2",
   socials: [
     {
       label: "GitHub",

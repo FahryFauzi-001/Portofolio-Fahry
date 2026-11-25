@@ -32,7 +32,7 @@ export function Footer() {
             </a>
             <a
               href={profile.cvPath}
-              download
+              download="Muhammad-Fahry-Fauzi-CV.pdf"
               className="inline-flex h-11 items-center gap-2 rounded-full border border-[#D4CEC2] bg-[#FAF9F5] px-6 text-sm font-medium text-[#141414] transition-colors hover:border-[#141414]"
             >
               <Download className="h-4 w-4" />

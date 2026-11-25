@@ -46,7 +46,7 @@ export default function AboutPage() {
           <div className="mt-7 flex flex-wrap items-center gap-5">
             <a
               href={profile.cvPath}
-              download
+              download="Muhammad-Fahry-Fauzi-CV.pdf"
               className="inline-flex h-11 items-center gap-2 rounded-full bg-[#141414] px-6 text-sm font-semibold text-[#F6F4EF] transition-opacity hover:opacity-85"
             >
               <Download className="h-4 w-4" />

@@ -114,7 +114,7 @@ export function AboutPanel({
             <div className="mt-5 flex flex-wrap justify-center gap-3">
               <a
                 href={profile.cvPath}
-                download
+                download="Muhammad-Fahry-Fauzi-CV.pdf"
                 className="inline-flex h-10 items-center gap-2 rounded-full bg-[#141414] px-5 text-xs font-semibold text-[#F6F4EF] transition-opacity hover:opacity-85"
               >
                 <Download className="h-4 w-4" />
