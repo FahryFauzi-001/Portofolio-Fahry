@@ -321,12 +321,14 @@ export function OrbitStage({
                         experiences={experiences}
                         certificates={certificates}
                         onClose={() => setActiveTarget(null)}
+                        embedded
                       />
                     ) : (
                       <ProjectPanel
                         category={activeTarget}
                         projects={activeProjects}
                         onClose={() => setActiveTarget(null)}
+                        embedded
                       />
                     )}
                   </motion.div>

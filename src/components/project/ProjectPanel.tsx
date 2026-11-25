@@ -21,12 +21,14 @@ interface ProjectPanelProps {
   category: Category;
   projects: ProjectSummary[];
   onClose: () => void;
+  embedded?: boolean;
 }
 
 export function ProjectPanel({
   category,
   projects,
   onClose,
+  embedded = false,
 }: ProjectPanelProps) {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
@@ -40,11 +42,15 @@ export function ProjectPanel({
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 24, scale: 0.98 }}
+      initial={{ opacity: 0, x: embedded ? 0 : 24, scale: embedded ? 1 : 0.98 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
-      exit={{ opacity: 0, x: 16, scale: 0.98 }}
+      exit={{ opacity: 0, x: embedded ? 0 : 16, scale: embedded ? 1 : 0.98 }}
       transition={{ type: "spring", stiffness: 320, damping: 30 }}
-      className="glass-panel rounded-[28px] border border-[#E5E1D8] p-5 shadow-panel sm:p-6"
+      className={
+        embedded
+          ? "px-3 pb-4 pt-1"
+          : "glass-panel rounded-[28px] border border-[#E5E1D8] p-5 shadow-panel sm:p-6"
+      }
     >
       {/* Top Bar: Category + 01 / 02 Switcher + Close */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E7E3DA] pb-4">

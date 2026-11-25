@@ -40,3 +40,11 @@
   filter: drop-shadow(0 0 1.4px #4f5bd5) drop-shadow(0 0 1.4px #4f5bd5)
     drop-shadow(0 16px 26px rgba(18, 17, 15, 0.17));
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -17,6 +17,7 @@ interface AboutPanelProps {
   experiences: Experience[];
   certificates: Certificate[];
   onClose: () => void;
+  embedded?: boolean;
 }
 
 export function AboutPanel({
@@ -24,6 +25,7 @@ export function AboutPanel({
   experiences,
   certificates,
   onClose,
+  embedded = false,
 }: AboutPanelProps) {
   const [tab, setTab] = React.useState<AboutTab>("about");
 
@@ -36,38 +38,47 @@ export function AboutPanel({
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 24, scale: 0.98 }}
+      initial={{ opacity: 0, x: embedded ? 0 : 24, scale: embedded ? 1 : 0.98 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
-      exit={{ opacity: 0, x: 16, scale: 0.98 }}
+      exit={{ opacity: 0, x: embedded ? 0 : 16, scale: embedded ? 1 : 0.98 }}
       transition={{ type: "spring", stiffness: 320, damping: 30 }}
-      className="glass-panel rounded-[28px] border border-[#E5E1D8] p-5 shadow-panel sm:p-6"
+      className={
+        embedded
+          ? "px-3 pb-4 pt-1"
+          : "glass-panel rounded-[28px] border border-[#E5E1D8] p-5 shadow-panel sm:p-6"
+      }
     >
-      {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E7E3DA] pb-4">
+      {/* Header: Mobile stacks clean top bar + single-row tabs; Desktop keeps compact single row */}
+      <div className="flex flex-col gap-3 border-b border-[#E7E3DA] pb-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center justify-between sm:order-2 sm:justify-end sm:gap-2">
+          <span className="font-mono text-[11px] font-semibold uppercase tracking-widest text-[#7A766E] sm:hidden">
+            About &amp; CV
+          </span>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-1 rounded-full border border-[#DFD9CC] bg-white px-3.5 py-1.5 text-xs font-medium text-[#141414] transition-colors hover:border-[#141414]"
+            >
+              <span>Full Page</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close about panel"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-[#DFD9CC] bg-white text-[#6B6861] hover:border-[#141414] hover:text-[#0E0E0E]"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+
         <Tabs
           options={options}
           value={tab}
           onChange={setTab}
-          layoutId="mug-about-tabs"
+          className="w-full justify-between sm:order-1 sm:w-auto sm:justify-start"
         />
-
-        <div className="flex items-center gap-2">
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-1 rounded-full border border-[#DFD9CC] bg-white px-3.5 py-1.5 text-xs font-medium text-[#141414] transition-colors hover:border-[#141414]"
-          >
-            <span>Full Page</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close about panel"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-[#DFD9CC] bg-white text-[#6B6861] hover:border-[#141414] hover:text-[#0E0E0E]"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </div>
       </div>
 
       {/* Tab Body */}
