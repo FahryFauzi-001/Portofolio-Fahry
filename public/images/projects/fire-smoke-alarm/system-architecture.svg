@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#F6F4EF"/>
+
+  <!-- Header -->
+  <text x="96" y="106" fill="#7A766E" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="0.06em">SYSTEM ARCHITECTURE · IOT SAFETY PROTOTYPE</text>
+  <text x="96" y="164" fill="#0E0E0E" font-family="system-ui, sans-serif" font-size="52" font-weight="800">Fire &amp; Smoke Alarm System</text>
+
+  <!-- Stage 1: Input Sensors -->
+  <text x="96" y="246" fill="#7A766E" font-family="ui-monospace, monospace" font-size="16" font-weight="700">01 · SENSOR INPUTS</text>
+
+  <rect x="96" y="272" width="336" height="176" rx="26" fill="#FAF9F5" stroke="#DDD7CB" stroke-width="2.5"/>
+  <rect x="124" y="300" width="98" height="30" rx="15" fill="#EFECE5"/>
+  <text x="173" y="320" text-anchor="middle" fill="#141414" font-family="ui-monospace, monospace" font-size="13" font-weight="700">ANALOG</text>
+  <text x="124" y="370" fill="#0E0E0E" font-family="system-ui, sans-serif" font-size="28" font-weight="800">MQ-2 Gas Sensor</text>
+  <text x="124" y="406" fill="#5E5B55" font-family="system-ui, sans-serif" font-size="18">Smoke, LPG &amp; methane levels</text>
+
+  <rect x="96" y="484" width="336" height="176" rx="26" fill="#FAF9F5" stroke="#DDD7CB" stroke-width="2.5"/>
+  <rect x="124" y="512" width="98" height="30" rx="15" fill="#EFECE5"/>
+  <text x="173" y="532" text-anchor="middle" fill="#141414" font-family="ui-monospace, monospace" font-size="13" font-weight="700">DIGITAL</text>
+  <text x="124" y="582" fill="#0E0E0E" font-family="system-ui, sans-serif" font-size="28" font-weight="800">IR Flame Sensor</text>
+  <text x="124" y="618" fill="#5E5B55" font-family="system-ui, sans-serif" font-size="18">Infrared open-flame detection</text>
+
+  <!-- Arrows Stage 1 -> Stage 2 -->
+  <path d="M432 360H516V444H568" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M432 572H516V488H568" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="568,436 584,444 568,452" fill="#141414"/>
+  <polygon points="568,480 584,488 568,496" fill="#141414"/>
+
+  <!-- Stage 2: Microcontroller Core -->
+  <text x="588" y="246" fill="#7A766E" font-family="ui-monospace, monospace" font-size="16" font-weight="700">02 · CONTROLLER &amp; LOGIC</text>
+
+  <rect x="588" y="272" width="404" height="388" rx="32" fill="#141414"/>
+  <rect x="622" y="308" width="180" height="32" rx="16" fill="#262626"/>
+  <text x="712" y="329" text-anchor="middle" fill="#F6F4EF" font-family="ui-monospace, monospace" font-size="13" font-weight="700">BUILT-IN WIFI · 5V</text>
+
+  <text x="622" y="394" fill="#FAF9F5" font-family="system-ui, sans-serif" font-size="34" font-weight="800">Arduino UNO</text>
+  <text x="622" y="436" fill="#FAF9F5" font-family="system-ui, sans-serif" font-size="34" font-weight="800">R4 WiFi</text>
+
+  <rect x="622" y="472" width="336" height="152" rx="20" fill="#1E1E1E" stroke="#303030" stroke-width="1.5"/>
+  <text x="646" y="510" fill="#A39E95" font-family="ui-monospace, monospace" font-size="14" font-weight="700">REAL-TIME C++ LOOP</text>
+  <text x="646" y="544" fill="#F6F4EF" font-family="ui-monospace, monospace" font-size="15">if (smoke &gt; thresh || flame)</text>
+  <text x="646" y="572" fill="#FCA5A5" font-family="ui-monospace, monospace" font-size="15">  triggerLocalAlarm();</text>
+  <text x="646" y="600" fill="#93C5FD" font-family="ui-monospace, monospace" font-size="15">  sendTelegramAlert();</text>
+
+  <!-- Arrows Stage 2 -> Stage 3 -->
+  <path d="M992 400H1076V360H1128" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M992 532H1076V572H1128" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="1128,352 1144,360 1128,368" fill="#141414"/>
+  <polygon points="1128,564 1144,572 1128,580" fill="#141414"/>
+
+  <!-- Stage 3: Dual Alert Outputs -->
+  <text x="1148" y="246" fill="#7A766E" font-family="ui-monospace, monospace" font-size="16" font-weight="700">03 · DUAL ALERT OUTPUTS</text>
+
+  <rect x="1148" y="272" width="356" height="176" rx="26" fill="#FAF9F5" stroke="#DDD7CB" stroke-width="2.5"/>
+  <rect x="1176" y="300" width="136" height="30" rx="15" fill="#EFECE5"/>
+  <text x="1244" y="320" text-anchor="middle" fill="#141414" font-family="ui-monospace, monospace" font-size="13" font-weight="700">LOCAL ALARM</text>
+  <text x="1176" y="370" fill="#0E0E0E" font-family="system-ui, sans-serif" font-size="28" font-weight="800">Buzzer &amp; Status LEDs</text>
+  <text x="1176" y="406" fill="#5E5B55" font-family="system-ui, sans-serif" font-size="18">Green (Normal) · Red + Buzzer (Danger)</text>
+
+  <rect x="1148" y="484" width="356" height="176" rx="26" fill="#162E24"/>
+  <rect x="1176" y="512" width="152" height="30" rx="15" fill="#234738"/>
+  <text x="1252" y="532" text-anchor="middle" fill="#D1FAE5" font-family="ui-monospace, monospace" font-size="13" font-weight="700">WIFI HTTP POST</text>
+  <text x="1176" y="582" fill="#FAF9F5" font-family="system-ui, sans-serif" font-size="28" font-weight="800">Telegram Bot API</text>
+  <text x="1176" y="618" fill="#B6D3C4" font-family="system-ui, sans-serif" font-size="18">Instant chat warning without GSM</text>
+
+  <!-- Footer bar -->
+  <line x1="96" y1="744" x2="1504" y2="744" stroke="#E2DDD3" stroke-width="2"/>
+  <text x="96" y="794" fill="#5E5B55" font-family="ui-monospace, monospace" font-size="18">SENSORS (MQ-2 + FLAME)  →  ARDUINO UNO R4 WIFI  →  LOCAL BUZZER/LED + TELEGRAM CHAT ALERT</text>
+</svg>
