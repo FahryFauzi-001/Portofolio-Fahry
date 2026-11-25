@@ -18,8 +18,8 @@ export function Gallery({ images, title }: GalleryProps) {
   const gridClass =
     images.length === 1
       ? "grid-cols-1"
-      : images.length === 3
-      ? "grid-cols-1 sm:grid-cols-3"
+      : images.length >= 3
+      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       : "grid-cols-1 sm:grid-cols-2";
 
   return (
