@@ -24,14 +24,14 @@ featured: true
 ---
 
 ## Problem
-First-time diners at Bomber Burger often feel unsure what to order before reaching the cashier—especially when juggling taste preferences, spice levels, budget, ingredient avoidance (like onion or cheese), or ordering for a group—while traditional ordering apps add unnecessary login and checkout friction.
+First-time diners at Bomber Burger often feel unsure what to order before reaching the cashier—especially when juggling taste preferences, spice levels, ingredient avoidance (like onion or cheese), or ordering for a group—while traditional ordering apps add unnecessary login and checkout friction.
 
 ## Project Context
 Built as a 5-person **Venture Creation / BiFest (Class LA75)** project at BINUS University and deployed live at **[bomber-burger-smart-menu-yunb.vercel.app](https://bomber-burger-smart-menu-yunb.vercel.app/)**.
 
 ## Solution & Live App Flow
 - **Mobile-First QR Experience (`max-w-[480px]`)**: Customers scan a QR code and land straight on Bomber Burger's Forest Green & Cream interface with a best-seller carousel and Halal badge—no login, cart, or online checkout required.
-- **6-Dimension Preference Picker (`/preferensi`)**: Captures **Taste** (*Pedas / Tidak terlalu pedas / Manis / Gurih*), **Protein** (*Beef / Chicken*), **Budget** (`< Rp30k` / `Rp30–50k` / `> Rp50k`), **Portion Size**, **Ingredients to Avoid** (*Bawang*, *Keju*), and **Party Size** (`1–10` diners, automatically generating a structured **Group Plan** for 3+ people), plus optional free-text notes.
+- **Interactive Preference Picker (`/preferensi`)**: Captures **Taste** (*Pedas / Tidak terlalu pedas / Manis / Gurih*), **Protein** (*Beef / Chicken*), **Portion Size** (*Ringan / Normal / Lapar berat*), **Ingredients to Avoid** (*Bawang*, *Keju*), and **Party Size** (automatically generating a structured **Group Plan** for 3+ people), plus optional free-text notes.
 - **Guarded Claude API Recommender (`api/recommend.ts`)**: Runs as a rate-limited Vercel Serverless Function (`10 req/min`, `12s` timeout) using the **Anthropic Claude SDK** against the official structured menu JSON. A dedicated post-processing guardrail (`enforceClaims`) verifies that every recommended ID exists in the menu, enforces avoided-ingredient exclusions, blocks hallucinated prices/claims, and falls back smoothly to a local deterministic recommender (`utils/recommend.ts`) if the API is unreachable.
 - **Explore & `Pilihanku` Cashier Checklist (`/menu`, `/menu/:id`, `/pilihanku`)**: Diners can also browse the full menu with Best Seller / Favourite badges and extra-beef customization, save picks via the floating action button, and show their final **`Pilihanku`** checklist directly to the cashier.
 
