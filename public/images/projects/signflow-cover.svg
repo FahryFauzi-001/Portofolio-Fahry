@@ -31,7 +31,7 @@
   <rect x="826" y="164" width="330" height="50" rx="25" fill="#F6F4EF"/>
   <text x="854" y="197" fill="#141414" font-family="ui-monospace, monospace" font-size="20" font-weight="700">MEDIAPIPE · 98-DIM</text>
   <rect x="826" y="688" width="608" height="54" rx="16" fill="#242424"/>
-  <text x="856" y="723" fill="#F6F4EF" font-family="ui-monospace, monospace" font-size="22">SIGNBIGRU · TOP-3 ACC 89.1% · 65 ASL WORDS</text>
+  <text x="1130" y="721" text-anchor="middle" fill="#F6F4EF" font-family="ui-monospace, monospace" font-size="18" font-weight="600">SIGNBIGRU · TOP-3 ACC 89.1% · 65 ASL WORDS</text>
   <!-- Left editorial typography -->
   <text x="120" y="250" fill="#A39E95" font-family="ui-monospace, monospace" font-size="22" font-weight="600">COMPUTER VISION · DEEP LEARNING</text>
   <text x="120" y="352" fill="#F6F4EF" font-family="system-ui, sans-serif" font-size="84" font-weight="800">SignFlow AI</text>
