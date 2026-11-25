@@ -14,7 +14,7 @@ export const certificates: Certificate[] = [
     id: "oracle-dev-gym-databases-foundations",
     title: "Databases for Developers: Foundations",
     issuer: "Oracle Corporation · Oracle Dev Gym",
-    date: "Completed",
+    date: "2025",
     image: "/images/certificates/oracle-databases-foundations.jpg",
     tags: ["Database", "SQL"],
     featured: true,
