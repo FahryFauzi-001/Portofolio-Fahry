@@ -1,10 +1,10 @@
 ---
 title: "BenerGasih"
 category: "web"
-summary: "Cyberpunk-styled fact-checking web terminal that verifies viral claims and news links against official fact-check publishers via Google Fact Check API and Tavily Search fallback."
+summary: "Cyberpunk-styled fact-checking web terminal that verifies manual claims and news links using a 3-stage pipeline: Google Fact Check API, Tavily Search, and Gemini AI reasoning."
 role: "Solo Full-Stack Developer"
 period: "2026"
-tech: ["JavaScript", "HTML/CSS", "Vercel Serverless", "Python", "Google Fact Check API", "Tavily API"]
+tech: ["JavaScript", "HTML/CSS", "Vercel Serverless", "Python", "Google Fact Check API", "Tavily API", "Gemini API"]
 cover: "/images/projects/benergasih-cover.png"
 gallery:
   - "/images/projects/benergasih/ui-desktop.png"
@@ -28,9 +28,9 @@ Viral claims and forwarded links spread on social media far faster than people t
 Designed and built the framework-free frontend terminal, Vercel serverless proxy (`api/check.js`), local Python dev server (`server.py`), and verdict normalization pipeline.
 
 ## Solution & Architecture
-- **Dual-Stage Lookup Pipeline**: Accepts a raw claim or news URL (extracting the article title automatically), checks an in-memory cache, queries the **Google Fact Check Tools API**, and falls back to the **Tavily Search API** only when no official publisher verdict exists.
-- **Clear 3-State Verdict Mapping**: Maps publisher free-text ratings deterministically into three transparent visual statuses—**TERBANTAH** (Refuted), **RUMOR / BELUM TERBUKTI** (Unverified / Related Articles), and **TERVERIFIKASI** (Verified)—while keeping technical errors visually neutral.
-- **Zero Client-Side Secret Exposure**: All API keys stay strictly on the serverless backend with built-in rate limiting.
+- **3-Stage Verification Pipeline**: Accepts manual claims or news URLs (extracting article titles automatically with SSRF protection), checks an in-memory cache, queries the **Google Fact Check Tools API** for official publisher verdicts, and falls back to filtered **Tavily Search** + **Gemini AI** (`gemini-flash-lite-latest`) to synthesize evidence-based verdicts for general facts or unindexed claims.
+- **Clear 3-State Verdict Mapping**: Maps verdicts into three transparent visual statuses—**TERBANTAH** (Refuted), **TERVERIFIKASI** (Verified), and context-aware yellow states (**ADA LIPUTAN TERKAIT** / **BELUM ADA CEK FAKTA** / **PERLU KONTEKS**)—while keeping technical errors visually neutral and clearly distinguishing publisher verdicts from AI-assisted summaries.
+- **Zero Client-Side Secret Exposure**: All API keys stay strictly on the serverless backend with built-in IP rate limiting, URL deduplication, and source filtering.
 
 ## Result
 Deployed a fast, zero-dependency live web utility at **benergasih.vercel.app** with an unmistakable retro-terminal aesthetic and honest source attribution.
