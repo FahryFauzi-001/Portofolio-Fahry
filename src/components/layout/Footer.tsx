@@ -41,35 +41,29 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-5 border-t border-[#E2DDD3] pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-col gap-3 text-xs text-[#6B6861] sm:flex-row sm:items-center sm:gap-5">
-            <div className="flex items-center gap-3">
+        <div className="mt-12 flex flex-col gap-4 border-t border-[#E2DDD3] pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex w-full items-center justify-between gap-2 text-[11px] text-[#6B6861] sm:w-auto sm:justify-start sm:gap-5 sm:text-xs">
+            <div className="flex items-center gap-2 whitespace-nowrap sm:gap-3">
               <span className="font-display font-bold text-[#0E0E0E]">MFF.</span>
               <span>© {new Date().getFullYear()} {profile.name}</span>
             </div>
 
-            <div className="flex items-center justify-between sm:justify-start">
-              <nav className="flex items-center gap-5">
-                <Link href="/projects" className="hover:text-[#0E0E0E]">
-                  Projects
-                </Link>
-                <Link href="/about" className="hover:text-[#0E0E0E]">
-                  About
-                </Link>
-              </nav>
-
-              <div className="sm:hidden">
-                <SocialLinks
-                  socials={profile.socials}
-                  variant="minimal"
-                  className="gap-4"
-                />
-              </div>
-            </div>
+            <nav className="flex shrink-0 items-center gap-3 whitespace-nowrap sm:gap-5">
+              <Link href="/projects" className="hover:text-[#0E0E0E]">
+                Projects
+              </Link>
+              <Link href="/about" className="hover:text-[#0E0E0E]">
+                About
+              </Link>
+            </nav>
           </div>
 
-          <div className="hidden sm:block">
-            <SocialLinks socials={profile.socials} variant="minimal" />
+          <div className="flex justify-end">
+            <SocialLinks
+              socials={profile.socials}
+              variant="minimal"
+              className="gap-4 sm:gap-5"
+            />
           </div>
         </div>
       </div>
