@@ -41,19 +41,36 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-[#E2DDD3] pt-6 sm:flex-row sm:items-center">
-          <div className="flex flex-wrap items-center gap-5 text-xs text-[#6B6861]">
-            <span className="font-display font-bold text-[#0E0E0E]">MFF.</span>
-            <span>© {new Date().getFullYear()} {profile.name}</span>
-            <Link href="/projects" className="hover:text-[#0E0E0E]">
-              Projects
-            </Link>
-            <Link href="/about" className="hover:text-[#0E0E0E]">
-              About
-            </Link>
+        <div className="mt-12 flex flex-col gap-5 border-t border-[#E2DDD3] pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 text-xs text-[#6B6861] sm:flex-row sm:items-center sm:gap-5">
+            <div className="flex items-center gap-3">
+              <span className="font-display font-bold text-[#0E0E0E]">MFF.</span>
+              <span>© {new Date().getFullYear()} {profile.name}</span>
+            </div>
+
+            <div className="flex items-center justify-between sm:justify-start">
+              <nav className="flex items-center gap-5">
+                <Link href="/projects" className="hover:text-[#0E0E0E]">
+                  Projects
+                </Link>
+                <Link href="/about" className="hover:text-[#0E0E0E]">
+                  About
+                </Link>
+              </nav>
+
+              <div className="sm:hidden">
+                <SocialLinks
+                  socials={profile.socials}
+                  variant="minimal"
+                  className="gap-4"
+                />
+              </div>
+            </div>
           </div>
 
-          <SocialLinks socials={profile.socials} variant="minimal" />
+          <div className="hidden sm:block">
+            <SocialLinks socials={profile.socials} variant="minimal" />
+          </div>
         </div>
       </div>
     </footer>
