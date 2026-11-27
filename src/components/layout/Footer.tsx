@@ -41,8 +41,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-[#E2DDD3] pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex w-full items-center justify-between gap-2 text-[11px] text-[#6B6861] sm:w-auto sm:justify-start sm:gap-5 sm:text-xs">
+        <div className="mt-12 flex flex-col gap-3 border-t border-[#E2DDD3] pt-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+          <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-[11px] text-[#6B6861] sm:gap-x-5 sm:text-xs">
             <div className="flex items-center gap-2 whitespace-nowrap sm:gap-3">
               <span className="font-display font-bold text-[#0E0E0E]">MFF.</span>
               <span>© {new Date().getFullYear()} {profile.name}</span>
