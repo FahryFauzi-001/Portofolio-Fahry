@@ -42,6 +42,14 @@ export function Navbar({ projects }: NavbarProps) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  const handleOrbitReturn = () => {
+    setMobileOpen(false);
+    if (pathname === "/") {
+      window.dispatchEvent(new CustomEvent("orbit:reset"));
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <header
@@ -56,6 +64,7 @@ export function Navbar({ projects }: NavbarProps) {
           {/* Minimalist MFF. wordmark matching reference */}
           <Link
             href="/"
+            onClick={handleOrbitReturn}
             className="font-display text-lg font-black tracking-tight text-[#0E0E0E] transition-opacity hover:opacity-70"
           >
             MFF.
@@ -73,6 +82,7 @@ export function Navbar({ projects }: NavbarProps) {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={item.href === "/" ? handleOrbitReturn : undefined}
                     className={cn(
                       "text-sm transition-colors",
                       active
@@ -123,7 +133,13 @@ export function Navbar({ projects }: NavbarProps) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    if (item.href === "/") {
+                      handleOrbitReturn();
+                    } else {
+                      setMobileOpen(false);
+                    }
+                  }}
                   className={cn(
                     "block rounded-xl px-4 py-2.5 text-sm font-medium",
                     active

@@ -49,6 +49,12 @@ export function OrbitStage({
   const mouseY = useSpring(rawY, { stiffness: 120, damping: 20, mass: 0.4 });
 
   React.useEffect(() => {
+    const onOrbitReset = () => setActiveTarget(null);
+    window.addEventListener("orbit:reset", onOrbitReset);
+    return () => window.removeEventListener("orbit:reset", onOrbitReset);
+  }, []);
+
+  React.useEffect(() => {
     if (!activeTarget) return;
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setActiveTarget(null);
