@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/Badge";
 import { TechChip } from "@/components/project/TechChip";
 import { DemoVideo } from "@/components/project/DemoVideo";
 import { Gallery } from "@/components/project/Gallery";
+import { ArchitectureDiagram } from "@/components/project/ArchitectureDiagram";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -218,7 +219,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
       {/* MDX Case Study Body */}
       <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-[#0E0E0E] prose-h2:mt-10 prose-h2:text-2xl prose-p:text-[#4A4843] prose-li:text-[#4A4843] prose-a:text-[#0E0E0E] prose-strong:text-[#0E0E0E]">
-        <MDXRemote source={project.content} />
+        <MDXRemote
+          source={project.content}
+          components={{ ArchitectureDiagram }}
+        />
       </div>
 
       {/* Gallery */}

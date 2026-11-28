@@ -35,6 +35,14 @@ Built as a 5-person **Venture Creation / BiFest (Class LA75)** project at BINUS 
 - **Guarded Claude API Recommender (`api/recommend.ts`)**: Runs as a rate-limited Vercel Serverless Function (`10 req/min`, `12s` timeout) using the **Anthropic Claude SDK** against the official structured menu JSON. A dedicated post-processing guardrail (`enforceClaims`) verifies that every recommended ID exists in the menu, enforces avoided-ingredient exclusions, blocks hallucinated prices/claims, and falls back smoothly to a local deterministic recommender (`utils/recommend.ts`) if the API is unreachable.
 - **Explore & `Pilihanku` Cashier Checklist (`/menu`, `/menu/:id`, `/pilihanku`)**: Diners can also browse the full menu with Best Seller / Favourite badges and extra-beef customization, save picks via the floating action button, and show their final **`Pilihanku`** checklist directly to the cashier.
 
+<ArchitectureDiagram
+  src="/images/projects/bomber-burger-architecture.jpg"
+  alt="Bomber Burger Smart Menu System Architecture Diagram"
+  eyebrow="Architecture"
+  title="System Architecture"
+  caption="Solid arrows show the primary request & cashier checklist flow; dashed arrows indicate static JSON reads and deterministic local fallback on API timeout or failure."
+/>
+
 ## Field Validation Results
 Tested directly on-site with real Bomber Burger customers:
 - **70%** of approached diners scanned the QR code.
