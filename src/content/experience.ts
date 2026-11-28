@@ -13,16 +13,6 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: "workshop-blits-rumah-belajar-melong",
-    org: "Workshop BLiTS Essay Rumah Belajar Melong · BINUS University",
-    role: "Community Program Participant",
-    type: "volunteer",
-    period: "2026",
-    highlights: [
-      "Participated actively in the BLiTS Essay Workshop at Rumah Belajar Melong, developing critical essay writing, data-driven argumentation, and structured ideation through intensive mentoring and writing evaluations.",
-    ],
-  },
-  {
     id: "volunteer-sdg3-daur-ulang",
     org: "SDG 3: Edukasi Kreativitas Anak Sekolah dengan Metode Daur Ulang Botol Plastik Bekas · BINUS University",
     role: "Student Project Associate",
