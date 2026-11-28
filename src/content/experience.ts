@@ -4,11 +4,11 @@ export const experiences: Experience[] = [
   {
     id: "pkm-sma-terang-nusantara",
     org: "PkM SMA Terang Nusantara · BINUS University",
-    role: "Technical Support Assistant — IoT & Basic AI",
+    role: "Volunteer",
     type: "volunteer",
     period: "2026",
     highlights: [
-      "Supported lecturers in the Community Service (PkM) program by preparing sensor kits and assisting hands-on IoT and introductory Artificial Intelligence (AI) sessions for SMA Terang Nusantara students.",
+      "Served as a Technical Support Assistant supporting lecturers in the Community Service (PkM) program by preparing sensor kits and assisting hands-on IoT and introductory Artificial Intelligence (AI) sessions for SMA Terang Nusantara students.",
       "Handled live classroom troubleshooting for both hardware components and program code to keep practical sessions running smoothly and on schedule.",
     ],
   },
