@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
   {
     id: "volunteer-industri-pangan-lokal",
     org: "Eksplorasi Potensi dan Tantangan Industri Pangan Lokal · BINUS University",
-    role: "Staff Volunteer",
+    role: "Student Project Associate",
     type: "volunteer",
     period: "2024",
     highlights: [
